@@ -2202,18 +2202,20 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 2.5em 0;
-			width: 100%;
+			margin: 2.5em auto;
+			width: 400px;
 		}
 
-			.image.main img {
-				width: 100%;
-			}
+			/*.image.main img {*/
+			/*	width: 60%;*/
+			/*	margin-right:5em;*/
+			/*	position:absolute;*/
+			/*}*/
 
 			@media screen and (max-width: 736px) {
 
 				.image.main {
-					margin: 1.5em 0;
+					margin: 2.5em 0;
 				}
 
 			}
@@ -2792,15 +2794,14 @@ input, select, textarea {
 				display: block;
 				height: 100%;
 				left: 0;
-				opacity: 0.5;
+				opacity: 0;
 				position: absolute;
 				width: 100%;
 				z-index: 2;
 			}
 
 			.tiles article:after {
-				background-color:#C0C0C0
-				/*rgb(250, 133, 133)*/
+				/*background-color:#ffffff;*/
 				content: '';
 				display: block;
 				height: 100%;
@@ -2812,7 +2813,7 @@ input, select, textarea {
 			}
 
 			.tiles article:hover:before {
-				opacity: 0;
+				opacity: 0.5;
 			}
 
 			.tiles article.is-transitioning {
@@ -2832,28 +2833,28 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color:  #ff8080;
+				background-color:  #ffffff;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: rgb(230, 230, 255);
+				background-color: #ffffff;
 
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #9999ff
+				background-color: #ffffff;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #ff4d4d;
+				background-color: #ffffff;
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #ff8080
+				background-color: #ffffff;
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #b3b3ff
+				background-color: #ffffff;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3412,12 +3413,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			pointer-events: none;
-			background-color: #c1c1c1;
+			/*background-color: #695677;*/
 			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.85;
+			opacity: 1;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -3505,9 +3506,9 @@ input, select, textarea {
 			background-color: #6fc3df;
 		}
 
-		#banner.style2:after {
-			background-color: #8d82c4;
-		}
+		/*#banner.style2:after {*/
+		/*	background-color: #ff9fde;*/
+		/*}*/
 
 		#banner.style3:after {
 			background-color: #ec8d81;
@@ -3619,10 +3620,10 @@ input, select, textarea {
 			}
 
 			#main > * > .inner {
-				padding: 4em 0 2em 0 ;
+				padding: em 2em 0 ;
 				margin: 0 auto;
 				max-width: 65em;
-				width: calc(100% - 6em);
+				width: calc(100%);
 				font-size: 30px;
 				text-align:center;
 			}
