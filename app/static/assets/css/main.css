@@ -67,9 +67,9 @@ input::-moz-focus-inner {
 
 input, select, textarea {
 	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
+	-webkit-appearance: radio;
+	-ms-appearance: radio;
+	appearance: radio;
 }
 
 /* Basic */
@@ -1781,6 +1781,7 @@ input, select, textarea {
 		header.major > :first-child {
 			margin-bottom: 0;
 			width: calc(100% + 0.5em);
+			position: center;
 		}
 
 			header.major > :first-child:after {
@@ -1987,12 +1988,13 @@ input, select, textarea {
 	input[type="checkbox"],
 	input[type="radio"] {
 		display: block;
-		/*float: left;*/
+		float: left;
 		margin-right: -2em;
+		margin-left:140px;
 		/*opacity: 0;*/
-		width: 20px;
+		width: 22px;
 		/*z-index: -1;*/
-		height:20px;
+		height:38px;
 		background-color:white;
 	}
 
@@ -2203,14 +2205,14 @@ input, select, textarea {
 		.image.main {
 			display: block;
 			margin: 2.5em auto;
-			width: 400px;
+			width: 300px;
 		}
 
-			/*.image.main img {*/
-			/*	width: 60%;*/
-			/*	margin-right:5em;*/
-			/*	position:absolute;*/
-			/*}*/
+			.image.main img {
+				width: 100%;
+				margin-right:5em;
+				position:center;
+			}
 
 			@media screen and (max-width: 736px) {
 
@@ -3639,7 +3641,7 @@ input, select, textarea {
 
 		#main.alt {
 			background-color: transparent;
-			border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+			border-bottom: solid 0px rgba(212, 212, 255, 0.1);
 		}
 
 /* Contact */

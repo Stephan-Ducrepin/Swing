@@ -21,7 +21,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="/index" class="logo"><strong>SWING</strong> <span>by SZS</span></a>
+			<a href="/index2" class="logo"><strong>SWING</strong> <span>by SZS</span></a>
 			<!--<nav>-->
 			<!--	<a href="#menu">Menu</a>-->
 			<!--</nav>-->
@@ -49,15 +49,13 @@
 				<div class="inner">
 					<header class="major">
 						<h1>Immigration</h1>
-						<ul>
-							<li>{{question}}</li>
-						</ul>
+							
 					</header>
-					<span class="image main"><img src="/static/images/pic11.jpg" alt="" /></span>
-					<form method='post' action="/results">
-						<label></label>
-						<input type='radio' name='istance' value = '1' > 1<br>
+					<span class="image main"><img src="static/images/pic11.jpg" alt="" /></span>
+					<form method='post' action="/results/{{topic}}">
+						<p><b>{{question}}</p></b>
 					
+						<input type='radio' name='istance' value = '1'>1 (strongly oppose)<br>
 						
 						<input type='radio' name='istance' value = '2' > 2<br>
 						
@@ -65,7 +63,7 @@
 						
 						<input type='radio' name='istance' value = '4' > 4<br>
 						
-						<input type='radio' name='istance' value = '5' > 5<br>
+						<input type='radio' name='istance' value = '5' > 5 (neutral)<br>
 						
 						<input type='radio' name='istance' value = '6' > 6<br>
 						
@@ -75,24 +73,21 @@
 						
 						<input type='radio' name='istance' value = '9' > 9<br>
 						
-						<input type='radio' name='istance' value = '10' > 10<br>
+						<input type='radio' name='istance' value = '10' > 10 (strongly support)<br>
 						
-						<input type="submit">
-
-					</form>
-					<p></p>
-						<form method='post' action="/results">
-						<label></label>
-						<input type='radio' name='istance1' value = '1' > 1<br>
+						<br>
+						<!--<input type="submit">-->
+						<p><b>{{question2}}</p></b>
+									
+						<input type='radio' name='istance1' value = '1' > 1 (strongly oppose)<br>
 					
-						
 						<input type='radio' name='istance1' value = '2' > 2<br>
 						
 						<input type='radio' name='istance1' value = '3' > 3<br>
 						
 						<input type='radio' name='istance1' value = '4' > 4<br>
 						
-						<input type='radio' name='istance1' value = '5' > 5<br>
+						<input type='radio' name='istance1' value = '5' > 5 (neutral)<br>
 						
 						<input type='radio' name='istance1' value = '6' > 6<br>
 						
@@ -102,9 +97,38 @@
 						
 						<input type='radio' name='istance1' value = '9' > 9<br>
 						
-						<input type='radio' name='istance1' value = '10' > 10<br>
+						<input type='radio' name='istance1' value = '10' > 10 (strongly support)<br>
+						
+						<br>
 						
 						<input type="submit">
+
+					</form>
+					<p></p>
+						<!--<form method='post' action="/results">-->
+						<!--<label></label>-->
+						<!--<input type='radio' name='istance1' value = '1' > 1<br>-->
+					
+						
+						<!--<input type='radio' name='istance1' value = '2' > 2<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '3' > 3<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '4' > 4<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '5' > 5<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '6' > 6<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '7' > 7<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '8' > 8<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '9' > 9<br>-->
+						
+						<!--<input type='radio' name='istance1' value = '10' > 10<br>-->
+						
+						<!--<input type="submit">-->
 
 					</form>
 					<p></p>
