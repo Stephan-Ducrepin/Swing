@@ -15,14 +15,11 @@ def candidateLandingPage():
 def aboutusPage():
     return render_template('about.html')
         
-@app.route('/representatives')
-def repPage():
-    return render_template('api rep.html')
     
 @app.route('/warren')
 def warren():
     heading = 'Elizabeth Warren'
-    info = 'Elizabeth Ann Warren, born on June 22, 1949, is an American politician and former academic serving as the senior United States Senator from Massachusetts since 2013.Warren was formerly a law school professor specializing in bankruptcy law. A progressive, she has focused on consumer protection, economic opportunity, and the social safety net while in the Senate. Pres. Barack Obama appointed her to a position in his administration in 2010. In 2011, she began seeking the Democratic nomination for Ted Kennedy’s former U.S. Senate seat. Learn more about her opinions '
+    info = 'Elizabeth Ann Warren was born on June 22, 1949 is an American politician and former academic serving as the senior United States Senator from Massachusetts since 2013. Warren was formerly a law school professor specializing in bankruptcy law. A progressive, she has focused on consumer protection, economic opportunity, and the social safety net while in the Senate. Pres. Barack Obama appointed her to a position in his administration in 2010. In 2011, she began seeking the Democratic nomination for Ted Kennedy’s former U.S. Senate seat.'
     topic = 'warren'
     image = "static/images/warren.jpg"
     return render_template ('candidateBios.html', info = info, topic = topic, heading = heading, image = image)
@@ -30,7 +27,7 @@ def warren():
 @app.route('/trump')
 def trump():
     heading = 'Donald Trump'
-    info = "Donald Trump, born on June 14, 1946, is the 45th and current president of the United States. Before entering politics, he was a businessman and television personality. Trump was born and raised in the New York City borough of Queens, and received an economics degree from the Wharton School. He has portrayed himself in cameo appearances in movies and on television, including 'Zoolander,' 'Sex and the City' and 'Home Alone 2: Lost in New York.' Trump's slogan, 'Make America Great Again,' was first used by Ronald Reagan while he was running against President Jimmy Carter. Learn more about his opinions "
+    info = "Donald Trump was born on June 14, 1946 is the 45th and current president of the United States. Before entering politics, he was a businessman and television personality. Trump was born and raised in the New York City borough of Queens, and received an economics degree from the Wharton School. He has portrayed himself in cameo appearances in movies and on television, including 'Zoolander,' 'Sex and the City' and 'Home Alone 2: Lost in New York.' Trump's slogan, 'Make America Great Again,' was first used by Ronald Reagan while he was running against President Jimmy Carter."
     topic = 'trump'
     image = "/static/images/trump.jpg"
     return render_template ('candidateBios.html', info = info, topic = topic, heading = heading, image=image)
@@ -38,7 +35,7 @@ def trump():
 @app.route('/biden')
 def biden():
     heading = 'Joe Biden'
-    info = 'Joseph Robinette Biden Jr.,born on November 20, 1942 in Scranton, Pennsylvania, is an American politician who served as the 47th vice president of the United States from 2009 to 2017. Biden also represented Delaware in the U.S. Senate from 1973 to 2009. A member of the Democratic Party, Biden is a candidate for president in the 2020 election. He became a lawyer in 1969 and was elected to the New Castle County Council in 1970. He was first elected to the U.S. Senate in 1972, when he became the sixth-youngest senator in American history. Learn more about his opinions '
+    info = 'Joseph Robinette Biden Jr. was born on November 20, 1942 in Scranton, Pennsylvania is an American politician who served as the 47th vice president of the United States from 2009 to 2017. Biden also represented Delaware in the U.S. Senate from 1973 to 2009. A member of the Democratic Party, Biden is a candidate for president in the 2020 election. He became a lawyer in 1969 and was elected to the New Castle County Council in 1970. He was first elected to the U.S. Senate in 1972, when he became the sixth-youngest senator in American history.'
     topic = 'biden'
     image = "/static/images/biden.jpg"
     return render_template ('candidateBios.html', info = info, topic = topic, heading = heading, image=image)
@@ -46,7 +43,7 @@ def biden():
 @app.route('/sanders')
 def sanders():
     heading = 'Bernie Sanders'
-    info = 'Bernard Sanders, born on September 8, 1941, is an American politician who served as the junior United States Senator from Vermont since 2007. Sanders ran unsuccessfully for the 2016 Democratic nomination for president and is running again in 2020. On domestic policy, he broadly supports labor rights, and has supported universal and single-payer healthcare, paid parental leave, and tuition-free tertiary education. On foreign policy, he broadly supports reducing military spending, pursuing more diplomacy and international cooperation, and putting greater emphasis on labor rights and environmental concerns when negotiating international trade agreements. Learn more about his opinions '
+    info = 'Bernard Sanders was born on September 8, 1941 is an American politician who served as the junior United States Senator from Vermont since 2007. Sanders ran unsuccessfully for the 2016 Democratic nomination for president and is running again in 2020. On domestic policy, he broadly supports labor rights, and has supported universal and single-payer healthcare, paid parental leave, and tuition-free tertiary education. On foreign policy, he broadly supports reducing military spending, pursuing more diplomacy and international cooperation, and putting greater emphasis on labor rights and environmental concerns when negotiating international trade agreements.'
     topic = 'sanders'
     image = "/static/images/sanders.png"
     return render_template ('candidateBios.html', info = info, topic = topic, heading = heading, image=image)
@@ -55,8 +52,8 @@ def sanders():
 # def candidateBios():
 #     return render_template('candidateBios.html')
     
-@app.route('/issues')
-def issues():
+@app.route('/is')
+def index():
     return render_template('index.html')
     
 @app.route('/immigration')
@@ -88,7 +85,7 @@ def lgbtq():
 @app.route('/civil_rights')
 def civil_rights():
     heading = 'Civil Rights'
-    message = 'To what extent do you think should the society or the government invest in advancing the rights of the marginalized groups? Use the survey underneath to determine where you stand on the matter.'
+    message = 'To what extent do you think should the society or the government invest in advancing the rigts of the marginalized groups? Use the survey underneath to determine where you stand on the matter.'
     image = '/static/images/rights.jpg'
     topic = 'civil_rights'
     return render_template('landing.html', message=message, heading=heading,image=image,topic=topic)
@@ -117,7 +114,7 @@ def survey(topic):
     elif topic=='civil_rights':
         title = 'Civil Rights'
         question = 'On a scale of 1-10, how strongly do you feel about civil rights?'
-        question2 = 'Should marijuana be legalized?'
+        question2 = 'Should the government focus on the #MeToo movement, or is it unnecessary? Should marijuana be legalized?'
     elif topic=='lgbtq':
         title = 'LGBTQ+'
         question = 'On a scale of 1-10. how strongly do you feel about the integration of LGBTQ+ people into society?'
@@ -138,7 +135,7 @@ def results(topic):
             print ('lol')
             print (value+value1)
             if topic == 'immigration':
-                otherResultsblurb= 'Elizabeth Warren wishes to eliminate criminal penalties for those crossing the border without papers. She also wishes to reduce immigration detention. Learn more about Senator Warrens past decisions on immigration '
+                otherResultsblurb= 'Elizabeth Warren wishes to eliminate criminal penalties for those crossing the border without papers. She also wishes to reduce immigration detention. Learn more about Senator Warrens past decisions on immigration'
             elif topic == 'abortion':
                 otherResultsblurb = "Elizabeth Warren is passionate about her opinion on abortion as she believes guaranteeing abortion and other reproductive rights around the country is very important. She calls on Congress to enshrine the right to abortion in federal statute, in case Roe v. Wade is overturned and the current federal right to abortion is taken away. More information about Warren’s decisions on Abortion can be found "
             elif topic == 'lgbtq':
@@ -160,16 +157,4 @@ def results(topic):
 
             return render_template('results.html', value=value, value1=value1, resultsblurb=resultsblurb, topic=topic)
     
-    
-    
-# @app.route('/events/new', methods=['GET', 'POST'])    
-# def new_event():
-#     if request.method == "GET":
-#         return render_template('api rep.html')
-#     else:
-#         address = request.form['address']
-#         return redirect('/')
-        
-        
-        
     
