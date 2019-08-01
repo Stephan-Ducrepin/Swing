@@ -33,6 +33,7 @@
 							<li><a href="/home">Home</a></li>
 							<li><a href="/issues">Issues</a></li>
 							<li><a href="/candidates">Candidates</a></li>
+							<li><a href="/representatives">Find Your Representatives</a></li>
 							<li><a href="/about"> About SWING</a></li>
 						</ul>
 					</nav>
@@ -79,11 +80,20 @@
 											<ul class="actions">
 												<li><a href="/survey/{{topic}}" class="button">Survey</a></li>
 											</ul>
-<!--<form method="post" action="/events/new">-->
-<!--	<label for="address">Address:</label>-->
-<!--	<input type="text" name="address" value="">-->
-<!--	<input type="submit" value="Submit">-->
-<!--</form>-->
+<form method="post" action="/events/new">
+	<label for="address">Address:</label>
+	<input type="text" name="address" value="">
+	<input type="submit" value="Submit">
+</form>
+
+
+      <div>
+        <ul>
+          {% for candidate in candidates %}
+            <li>Your {{candidate[0]}} is {{candidate[1]}}</li>
+          {% endfor %}
+        </ul>
+      </div>
 										</div>
 									</div>
 								</section>

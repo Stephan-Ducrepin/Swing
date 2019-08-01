@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, request
-from app.models import model, formopener
+from app.models import model, formopener, api_practice
 
 @app.route('/home')
 @app.route('/')
@@ -162,14 +162,18 @@ def results(topic):
     
     
     
-# @app.route('/events/new', methods=['GET', 'POST'])    
-# def new_event():
-#     if request.method == "GET":
-#         return render_template('api rep.html')
-#     else:
-#         address = request.form['address']
-#         return redirect('/')
+@app.route('/events/new', methods=['GET', 'POST'])    
+def new_event():
+    if request.method == "GET":
+        return render_template('api rep.html')
+    else:
+        address = request.form['address']
+        candidates = api_practice.api_function(address)
+        #print (candidates)
+        return render_template("api rep.html", candidates=candidates)
         
+
+#api_practice.api_function(address)
         
         
     
