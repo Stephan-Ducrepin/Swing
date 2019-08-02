@@ -2,7 +2,8 @@ from app import app
 from flask import render_template, request
 from app.models import model, formopener, api_practice
 
-requests==1.25.3
+
+
 
 @app.route('/home')
 @app.route('/')
